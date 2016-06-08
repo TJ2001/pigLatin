@@ -1,23 +1,26 @@
-var word = "cat";
 var wordArray = word.split("");
 
 var arrVowel = ["a", "e", "o", "u", "i"];
 
-
-
 for (var i = 0; i < arrVowel.length; i++) {
-  if (word.charAt(0) !== arrVowel[i]) {
-
-    var newArr = word.split('');
-    newArr.shift();
-    newArr.push(word.charAt(0));
-    newArr.join('');
-    console.log(newArr + "ay");
-
+  if (word.charAt(0) === arrVowel[i]) {
+    var result = true;
+    break;
   } else {
-    console.log(word + "ay");
+    var result = false
   }
 }
+
+
+$(document).ready(function() {
+  $("form#pig-latin").submit(function(event) {
+    event.preventDefault();
+    word = $("input#word").val();
+
+
+    alert(result);
+  });
+});
 
 // var counter = 0;
 // arrVowel.forEach(function(){
