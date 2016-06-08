@@ -1,16 +1,21 @@
 var arrVowel = ["a", "e", "o", "u", "i"];
 
+var arrWord = word.split('');
 var pigLatin = function(word) {
-  for (var j = 0; j < word.length; j++) {
-    for (var i = 0; i < arrVowel.length; i++) {
+  var output = word + "ay";
+  for (var i = 0; i < word.length; i++) {
+    //we want to look at "c" => word[0] => word[i]
+    for (var j = 0; j < arrVowel.length; j++) {
       if (word.charAt(i) !== arrVowel[j]) {
-        return true;
-      } else {
-        return false;
+        //
+        return word.slice(0, -1);
+
+        } else {
+
+      }
     }
   }
-}
-
+  return output;
 }
 
 $(document).ready(function() {
