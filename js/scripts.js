@@ -1,10 +1,8 @@
-// var wordArray = word.split("");
 var pigLatin = function(word) {
-  debugger;
+
   var arrVowel = ["a", "e", "o", "u", "i"];
   var newArr = word.split('');
 
-  var output = newArr + "ay";
 
   for (var i = 0; i < arrVowel.length; i++) {
     if (word.charAt(0) !== arrVowel[i]) {
@@ -12,53 +10,17 @@ var pigLatin = function(word) {
 
       newArr.shift();
       newArr.push(word.charAt(0));
-      console.log(newArr);
-      newArr.join('');
-      console.log(newArr);
-      output = newArr + "ay";
+      var joinArr = newArr.join("");
+      var output = joinArr + "ay";
       return output;
 
     } else {
-      newArr.join('');
+      var joinArr =newArr.join('');
+      var output = joinArr + "ay";
       return output;
     }
   }
 };
-
-
-
-
-
-
-
-
-
-// var arrVowel = ["a", "e", "o", "u", "i"];
-//
-// var arrWord = word.split('');
-// var pigLatin = function(word) {
-//   var output = word + "ay";
-//   for (var i = 0; i < word.length; i++) {
-//     //we want to look at "c" => word[0] => word[i]
-//     for (var j = 0; j < arrVowel.length; j++) {
-//       if (word.charAt(i) !== arrVowel[j]) {
-//         //
-//         return word.slice(0, -1);
-//
-//         } else {
-//
-//       }
-//     }
-//   }
-//   return output;
-// }
-
-
-
-
-
-
-
 
 
 $(document).ready(function() {
