@@ -31,3 +31,17 @@ $(document).ready(function() {
 //   }
 //   counter++;
 // });
+
+for (var j = 0; j < arrVowel.length; j++) {
+  if (word.charAt(1) !== arrVowel[j]) {
+    // var string = newArr.toString();
+    newArr.splice(0, 2);
+    newArr.push(word.charAt(0));
+    newArr.push(word.charAt(1));
+    var joinArr = newArr.join("");
+    var output = joinArr + "ay";
+  } else {
+    alert("error");
+
+  }
+}

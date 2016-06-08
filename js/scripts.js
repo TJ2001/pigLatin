@@ -1,10 +1,7 @@
 var pigLatin = function(word) {
-// debugger;
+
   var arrVowel = ["a", "e", "o", "u", "i"];
   var newArr = word.split('');
-
-var arrVowel = ["a", "e", "o", "u", "i"];
-
 
 for (var i = 0; i < arrVowel.length; i++) {
   if (word.charAt(0) === arrVowel[i]) {
@@ -14,6 +11,7 @@ for (var i = 0; i < arrVowel.length; i++) {
     var result = false
   }
 }
+
 
     if (result === true) {
       var joinArr =newArr.join('');
